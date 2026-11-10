@@ -1,0 +1,15 @@
+{
+  "generator": "C:\\path\\ke\\.claude\\skills\\test-plan\\scripts\\generate_test_plan.py",
+  "output_dir": "C:\\path\\ke\\folder\\Test Plan",
+  "base_url": "",
+  "browser": "chromium",
+  "headless": true,
+  "slow_mo_ms": 0,
+  "timeout_ms": 10000,
+  "download_timeout_ms": 120000,
+  "viewport": {
+    "width": 1366,
+    "height": 768
+  },
+  "full_page_screenshot": false
+}

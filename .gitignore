@@ -1,0 +1,15 @@
+# Rahasia dan config per mesin
+.env
+.env.*
+!.env.example
+config.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Hasil run pw-runner dan test plan per tiket
+run-log.txt
+screens/
+traces/
+FR-DEV-02 Test Plan - *.xlsx

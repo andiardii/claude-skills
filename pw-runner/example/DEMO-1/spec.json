@@ -1,0 +1,180 @@
+{
+  "ticket": "DEMO-1",
+  "feature": "Demo pw-runner: Buku Induk Penduduk",
+  "date": "2026-10-27",
+  "tester": "Richard",
+  "cases": [
+    {
+      "test_case": "Login dengan password salah",
+      "category": "Security",
+      "test_data": "Password: salah123",
+      "result_1": "Pass",
+      "notes_1": "Sesuai ekspektasi (otomatis)",
+      "result_2": "",
+      "notes_2": "",
+      "result_3": "",
+      "steps": [
+        {
+          "action": "goto",
+          "target": "/index.html",
+          "value": "",
+          "note": ""
+        },
+        {
+          "action": "fill",
+          "target": "label=Email",
+          "value": "{{EMAIL}}",
+          "note": ""
+        },
+        {
+          "action": "fill",
+          "target": "label=Password",
+          "value": "salah123",
+          "note": ""
+        },
+        {
+          "action": "click",
+          "target": "role=button[Masuk]",
+          "value": "",
+          "note": ""
+        },
+        {
+          "action": "expectText",
+          "target": "#err",
+          "value": "password salah",
+          "note": ""
+        }
+      ],
+      "screenshot_1": "D:\\Software\\laragon\\www\\random\\pw-runner\\example\\DEMO-1\\screens\\1.png"
+    },
+    {
+      "test_case": "Login",
+      "category": "Functional",
+      "test_data": "",
+      "result_1": "Pass",
+      "notes_1": "Sesuai ekspektasi (otomatis)",
+      "result_2": "",
+      "notes_2": "",
+      "result_3": "",
+      "steps": [
+        {
+          "action": "fill",
+          "target": "label=Password",
+          "value": "{{PASSWORD}}",
+          "note": ""
+        },
+        {
+          "action": "click",
+          "target": "role=button[Masuk]",
+          "value": "",
+          "note": ""
+        },
+        {
+          "action": "expectUrl",
+          "target": "",
+          "value": "penduduk.html",
+          "note": ""
+        }
+      ],
+      "screenshot_1": "D:\\Software\\laragon\\www\\random\\pw-runner\\example\\DEMO-1\\screens\\2.png"
+    },
+    {
+      "test_case": "Mengakses halaman Buku Induk Penduduk",
+      "category": "Functional",
+      "test_data": "",
+      "result_1": "Pass",
+      "notes_1": "Sesuai ekspektasi (otomatis)",
+      "result_2": "",
+      "notes_2": "",
+      "result_3": "",
+      "steps": [
+        {
+          "action": "expectVisible",
+          "target": "role=heading[Buku Induk Penduduk]",
+          "value": "",
+          "note": ""
+        },
+        {
+          "action": "select",
+          "target": "label=Dusun",
+          "value": "Krajan",
+          "note": ""
+        },
+        {
+          "action": "expectCount",
+          "target": "tbody tr",
+          "value": "2",
+          "note": ""
+        }
+      ],
+      "screenshot_1": "D:\\Software\\laragon\\www\\random\\pw-runner\\example\\DEMO-1\\screens\\3.png"
+    },
+    {
+      "test_case": "Hapus data Buku Induk Penduduk",
+      "category": "Functional",
+      "test_data": "NIK 3500000000000002",
+      "result_1": "Pass",
+      "notes_1": "Sesuai ekspektasi (otomatis)",
+      "result_2": "",
+      "notes_2": "",
+      "result_3": "",
+      "steps": [
+        {
+          "action": "acceptDialog",
+          "target": "",
+          "value": "",
+          "note": ""
+        },
+        {
+          "action": "click",
+          "target": "tr:has-text('3500000000000002') >> role=button[name='Hapus']",
+          "value": "",
+          "note": ""
+        },
+        {
+          "action": "expectText",
+          "target": "#toast",
+          "value": "Data berhasil dihapus",
+          "note": ""
+        },
+        {
+          "action": "expectHidden",
+          "target": "text=Siti Contoh",
+          "value": "",
+          "note": ""
+        }
+      ],
+      "screenshot_1": "D:\\Software\\laragon\\www\\random\\pw-runner\\example\\DEMO-1\\screens\\4.png"
+    },
+    {
+      "test_case": "Contoh test yang sengaja gagal",
+      "category": "Functional",
+      "test_data": "",
+      "result_1": "Failed",
+      "notes_1": "Gagal di step 1 (expectText): Locator expected to be visible (waiting for get_by_text(\"Tombol Export\").first)",
+      "result_2": "",
+      "notes_2": "",
+      "result_3": "",
+      "steps": [
+        {
+          "action": "expectText",
+          "target": "",
+          "value": "Tombol Export",
+          "note": "fitur belum ada, harus Failed"
+        }
+      ],
+      "screenshot_1": "D:\\Software\\laragon\\www\\random\\pw-runner\\example\\DEMO-1\\screens\\5.png"
+    },
+    {
+      "test_case": "Print Buku Induk Penduduk (dites manual)",
+      "category": "Functional",
+      "test_data": "",
+      "result_1": "",
+      "notes_1": "",
+      "result_2": "",
+      "notes_2": "",
+      "result_3": "",
+      "steps": []
+    }
+  ]
+}

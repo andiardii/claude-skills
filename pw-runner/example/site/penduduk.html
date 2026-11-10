@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><title>Buku Induk Penduduk - Demo Desa</title></head>
+<body>
+  <h1>Buku Induk Penduduk</h1>
+  <label>Dusun <select id="dusun"><option>Semua</option><option>Krajan</option><option>Sumber</option></select></label>
+  <label>Cari <input placeholder="Cari nama"></label>
+  <table border="1">
+    <thead><tr><th>NIK</th><th>Nama</th><th>Dusun</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>3500000000000001</td><td>Budi Contoh</td><td>Krajan</td><td><button onclick="hapus(this)">Hapus</button></td></tr>
+      <tr><td>3500000000000002</td><td>Siti Contoh</td><td>Sumber</td><td><button onclick="hapus(this)">Hapus</button></td></tr>
+    </tbody>
+  </table>
+  <p id="toast"></p>
+  <script>
+    function hapus(btn) {
+      if (confirm('Yakin hapus data ini?')) {
+        btn.closest('tr').remove();
+        document.getElementById('toast').textContent = 'Data berhasil dihapus';
+      }
+    }
+  </script>
+</body>
+</html>
