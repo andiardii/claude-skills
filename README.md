@@ -9,6 +9,7 @@ Kumpulan skill Claude Code buatan sendiri beserta alat pendukungnya. Repo ini pr
 | `skills/start` | Mengganti nama sesi jadi ID tiket Jira atau judul bebas. |
 | `skills/test-plan` | Membuat dokumen Test Plan FR-DEV-02 (xlsx) per tiket. |
 | `skills/list-kerja` | Mengirim laporan pekerjaan ke grup Telegram lewat bot. |
+| `skills/deskripsi-tiket` | Menulis deskripsi tiket Jira bergaya PM, siap copy-paste ke kolom Description. |
 | `pw-runner` | Menjalankan langkah test dari xlsx dengan Playwright, tanpa AI. Dipakai oleh `test-plan`. |
 
 ## Pemasangan
